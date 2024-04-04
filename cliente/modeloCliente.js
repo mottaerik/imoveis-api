@@ -13,13 +13,13 @@ const Cliente = conexao.define('clientes', {
         type: Sequelize.STRING(150),
         allowNull: false
     },
-    CPF:{
-        type: Sequelize.STRING(11),
+    cnpj:{
+        type: Sequelize.STRING(14),
         allowNull: false,
         unique: true
     },
-    CNPJ:{
-        type: Sequelize.STRING(14),
+    cnpj:{
+        type: Sequelize.STRING(11),
         allowNull: false
     },
     dataNascimento:{

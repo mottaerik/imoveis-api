@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const conexao = require('../conexao/conexao');
 const Endereco = require('../endereco/modeloEndereco')
 
-const Proprietario = conexao.define('Proprietario', {
+const Proprietario = conexao.define('proprietario', {
     codProprietario: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -22,10 +22,6 @@ const Proprietario = conexao.define('Proprietario', {
         type: Sequelize.STRING(14),
         allowNull: false
     },
-    dataNascimento:{
-        type: Sequelize.DATE,
-        allowNull: false
-    },
     codEndereco: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -34,7 +30,12 @@ const Proprietario = conexao.define('Proprietario', {
             key: 'codEndereco',
         },
         onDelete: 'CASCADE'   
+    },
+    dataNascimento:{
+        type: Sequelize.DATE,
+        allowNull: false
     }
+    
 }, {
     timestamps: false
 });

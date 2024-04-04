@@ -1,7 +1,7 @@
-const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
 const Clientes = require('../cliente/modeloCliente');
 const Imovel = require('../imovel/modeloImovel');
+const Sequelize = require('sequelize');
+const conexao = require('../conexao/conexao');
 
 const Visita = conexao.define('visitas', {
     codCliente: {
@@ -24,18 +24,19 @@ const Visita = conexao.define('visitas', {
         },
         onDelete: 'CASCADE'   
     },
-    visitaRealizada: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false
-    },
     dataVisita:{
         type: Sequelize.DATE,
+        allowNull: false
+    },
+    visitaRealizada: {
+        type: Sequelize.BOOLEAN,
         allowNull: false
     }
 }, {
     timestamps: false
 });
 
-Visita.sync({ force: false });
+Visita.sync(
+    { force: false });
 
 module.exports = Visita;

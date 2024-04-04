@@ -1,5 +1,5 @@
 {
-  "name": "nodejs_banco_dados",
+  "name": "nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erik Motta",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.1",
-    "mysql2": "^3.9.2",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.3",
     "nodemon": "^3.1.0",
-    "sequelize": "^6.37.1"
+    "sequelize": "^6.37.2"
   }
 }

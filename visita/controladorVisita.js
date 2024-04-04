@@ -27,7 +27,7 @@ router.post('/visita', (req, res) => {
         dataVisita: req.body.dataVisita,
         codEndereco: req.body.codEndereco
     }).then(() => {
-        res.send('Visita cadastrado com sucesso.');
+        res.send('Visita cadastrada com sucesso.');
     }).catch((erro) => {
         res.send('Ocorreu um erro: ' + erro);
     });
@@ -49,7 +49,7 @@ router.put('/visita/:imovelId1/:clienteId2', (req, res) => {
             codImovel: codigoImovel
         }
     }).then(() => {
-        res.send('Visita atualizado com sucesso.');
+        res.send('Visita atualizada com sucesso.');
     }).catch((erro) => {
         res.send('Ocorreu um erro: ' + erro);
     });
@@ -58,7 +58,7 @@ router.put('/visita/:imovelId1/:clienteId2', (req, res) => {
 router.delete('/visita/:imovelId1/:clienteId2', (req, res) => {
     const codigoVisita = req.params.visitaId;
     Visita.destroy({ where: {codCliente: codigoCliente,codImovel: codigoImovel} }).then(() => {
-        res.send('Visita removido com sucesso.');
+        res.send('Visita removida com sucesso.');
     }).catch((erro) => {
         res.send('Ocorreu um erro: ' + erro);
     });

@@ -9,14 +9,14 @@ const TipoImovel = conexao.define('tipoimoveis', {
         autoIncrement: true
     },
     descricao: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(60),
         allowNull: false
     }
 }, {
     timestamps: false
 });
 
-TipoImovel.sync({ force: false });
-
+TipoImovel.sync(
+    { force: false });
 
 module.exports = TipoImovel;

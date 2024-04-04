@@ -9,7 +9,7 @@ const conexao = new Sequelize('nodejs', 'root', 'root', {
 conexao.authenticate().then(() => {
     console.log('Conectado com sucesso.');
 }).catch((erro) => {
-    console.log('Deu erro: ', erro);
+    console.log('Falha ao se conectar: ', erro);
 });
 
 module.exports = conexao;

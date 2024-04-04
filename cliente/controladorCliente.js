@@ -39,7 +39,7 @@ router.put('/cliente/:clienteId', (req, res) => {
             codCliente: codigoCliente
         }
     }).then(() => {
-        res.send('Cliente atualizado com sucesso.');
+        res.send('O cliente foi atualizado.');
     }).catch((erro) => {
         res.send('Ocorreu um erro: ' + erro);
     });
